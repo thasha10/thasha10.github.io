@@ -1,0 +1,107 @@
+# Pages CMS configuration: this is what you see when you sign in at app.pagescms.org
+media:
+  input: media
+  output: /media
+
+content:
+  - name: posts
+    label: Posts
+    type: collection
+    path: posts
+    format: yaml-frontmatter
+    filename:
+      template: "{primary}.md"
+      field: create          # you type the address yourself when creating a post
+    view:
+      fields: [title, lang, category, date]
+      primary: title
+      sort: [date, title]
+      default:
+        sort: date
+        order: desc
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: lang
+        label: Language
+        type: select
+        default: en
+        options:
+          values:
+            - name: en
+              label: English
+            - name: ta
+              label: தமிழ் (Tamil)
+      - name: category
+        label: Category
+        type: select
+        required: true
+        default: musings
+        options:
+          values:
+            - name: stories
+              label: Stories
+            - name: musings
+              label: Musings
+            - name: poetry
+              label: Poetry
+            - name: translations
+              label: Translations
+      - name: date
+        label: Publish date (a future date schedules the post)
+        type: date
+        required: true
+        options:
+          format: yyyy-MM-dd
+      - name: tags
+        label: Tags (use the English tag name, e.g. love)
+        type: string
+        list: true
+      - name: translationKey
+        label: Pair key (give the English and Tamil versions of one piece the same word)
+        type: string
+      - name: cover
+        label: Cover image (optional)
+        type: image
+      - name: excerpt
+        label: Short summary (optional, made automatically if empty)
+        type: text
+      - name: draft
+        label: Keep as draft (will not be published)
+        type: boolean
+        default: false
+      - name: body
+        label: Text
+        type: rich-text
+
+  - name: tags
+    label: Tags list (English and Tamil names)
+    type: file
+    path: data/tags.json
+    format: json
+    list: true
+    fields:
+      - name: key
+        label: Tag key (English, lowercase, e.g. love)
+        type: string
+      - name: en
+        label: English name
+        type: string
+      - name: ta
+        label: Tamil name
+        type: string
+
+  - name: about
+    label: About page
+    type: file
+    path: data/about.json
+    format: json
+    fields:
+      - name: en
+        label: About text (English)
+        type: text
+      - name: ta
+        label: About text (Tamil)
+        type: text

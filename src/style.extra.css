@@ -1,0 +1,30 @@
+/* ---------- Additions for the generated site ---------- */
+
+/* Language: only the chosen language's labels show */
+html[lang="ta"] [data-l="en"], html:not([lang="ta"]) [data-l="ta"] { display: none !important; }
+
+/* Placeholder cover washes (one per category) until a real cover image is added */
+.art-poetry       { background: radial-gradient(120% 90% at 20% 10%, #5A1626 0%, transparent 60%), linear-gradient(160deg, #2A1018, #150B10); }
+.art-stories      { background: radial-gradient(110% 90% at 80% 15%, #3B1B3C 0%, transparent 60%), linear-gradient(160deg, #241226, #150B10); }
+.art-musings      { background: radial-gradient(120% 90% at 50% 0%, #4A1F2B 0%, transparent 65%), linear-gradient(160deg, #22141A, #150B10); }
+.art-translations { background: radial-gradient(110% 90% at 15% 90%, #4A2330 0%, transparent 60%), linear-gradient(160deg, #1F1218, #150B10); }
+[data-theme="light"] .cover .art { opacity: 1; background: radial-gradient(110% 90% at 20% 10%, #E3B9C2 0%, transparent 65%), linear-gradient(160deg, #F0DDE0, #F7F2F2); }
+[data-theme="light"] .cover .mark { color: var(--rose); opacity: .14; }
+/* Tamil has no true italic, so keep poems upright in Tamil instead of a slanted fake */
+html[lang="ta"] .hero p, html[lang="ta"] .entry p.poem, html[lang="ta"] .body.poetry p { font-style: normal !important; }
+.cover img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+
+/* Post text: poems get their line breaks from the markdown, so no pre-line here */
+.body.poetry p { white-space: normal; }
+.body img { max-width: 100%; height: auto; border-radius: 3px; margin: 1.2em 0; }
+.body a { color: var(--rose-text); border-bottom: 1px solid var(--rose); }
+.body blockquote { margin: 1.4em 0; padding: 0 0 0 1.2em; border-left: 2px solid var(--rose); color: var(--muted); font-style: italic; }
+.body h2, .body h3 { font-family: var(--display); font-weight: 600; line-height: 1.25; margin: 1.6em 0 .5em; }
+.body h2 { font-size: 1.9rem; }
+.body h3 { font-size: 1.5rem; }
+.body hr { border: 0; border-top: 1px solid var(--line); margin: 2em 0; }
+.about-body { max-width: 60ch; padding-top: 18px; font-size: 1.2rem; }
+.about-body p { margin: 0 0 1.2em; }
+.cusdis-note { color: var(--muted); }
+.menu a { white-space: nowrap; }
+noscript ul { padding-left: 1.2em; }

@@ -1,0 +1,26 @@
+{
+  "cats": {
+    "stories": { "en": "Stories", "ta": "சிறுகதைகள்" },
+    "musings": { "en": "Musings", "ta": "எண்ணங்கள்" },
+    "poetry": { "en": "Poetry", "ta": "கவிதைகள்" },
+    "translations": { "en": "Translations", "ta": "மொழிபெயர்ப்புகள்" }
+  },
+  "ui": {
+    "en": {
+      "brand": "Thasha", "home": "Home", "about": "About", "latest": "Latest", "tags": "Tags",
+      "read": "Read", "share": "Share", "copy": "Copy link", "copied": "Copied", "more": "More",
+      "reads": "reads", "prev": "Previous", "next": "Next", "none": "Nothing here in English yet.",
+      "comments": "Comments", "search": "Search", "searchPh": "Search posts", "results": "Results for",
+      "loadMore": "Show older posts", "post": "post", "posts": "posts", "alsoOther": "Also in Tamil (தமிழில்)",
+      "notFound": "That page could not be found.", "backHome": "Back to the home page"
+    },
+    "ta": {
+      "brand": "தஷா", "home": "முகப்பு", "about": "அறிமுகம்", "latest": "புதியவை", "tags": "குறிச்சொற்கள்",
+      "read": "வாசிக்க", "share": "பகிர்", "copy": "இணைப்பை நகலெடு", "copied": "நகலெடுக்கப்பட்டது", "more": "மேலும்",
+      "reads": "வாசிப்புகள்", "prev": "முந்தையது", "next": "அடுத்தது", "none": "இதில் தமிழ் பதிவுகள் இன்னும் இல்லை.",
+      "comments": "கருத்துகள்", "search": "தேடு", "searchPh": "பதிவுகளைத் தேடுங்கள்", "results": "தேடல் முடிவுகள்",
+      "loadMore": "பழைய பதிவுகளைக் காட்டு", "post": "பதிவு", "posts": "பதிவுகள்", "alsoOther": "ஆங்கிலத்திலும் (English)",
+      "notFound": "அந்தப் பக்கம் கிடைக்கவில்லை.", "backHome": "முகப்புப் பக்கத்திற்குத் திரும்பு"
+    }
+  }
+}
